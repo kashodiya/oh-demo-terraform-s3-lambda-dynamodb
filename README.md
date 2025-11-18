@@ -1,5 +1,35 @@
 # S3-Lambda-DynamoDB Data Processing Pipeline
 
+> **🤖 AI-Generated Project**: This entire project was created using a single prompt with OpenHands! The AI generated all Terraform configurations, Lambda code, deployment scripts, and documentation in one shot.
+
+## Original Prompt
+
+This project has 2 sub components:
+
+1. Write Terraform script to create a S3 bucket in which data files will be uploaded. When file arrive it should trigger a Lambda. Lambda should store the data in DynamoDB.
+2. Write that Lambda code.
+
+### AWS Environment Setup Requirements
+
+**Authentication:**
+- You are executing on an EC2 instance with an IAM role that has permissions for all required AWS services
+- Do not use or reference AWS access keys, secret keys, or credential files
+- Rely solely on the EC2 instance's IAM role for AWS API authentication
+
+**Infrastructure Management:**
+- Use Terraform exclusively for creating all AWS resources
+- Ensure all AWS resources are defined in Terraform configuration files
+- The environment must be completely destroyable using `terraform destroy` without leaving any orphaned resources
+
+**Clean Deployment Goal:**
+- After running `terraform destroy`, no AWS resources should remain active or incur charges
+- All resources must be properly tracked in Terraform state
+- Use local state
+
+---
+
+## Project Overview
+
 This project creates an AWS infrastructure that automatically processes files uploaded to an S3 bucket using Lambda functions and stores the metadata in DynamoDB.
 
 ## Architecture
