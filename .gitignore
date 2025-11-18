@@ -48,6 +48,9 @@ Thumbs.db
 *.zip
 lambda_function.zip
 
+# Generated Lambda code (created from template)
+lambda/
+
 # Python
 __pycache__/
 *.py[cod]
